@@ -1,5 +1,7 @@
 # Terraform AWS lambda module
 This terraform module creates the lambda function in python
+## Usage
+~~~
 module "awsLambda" {
   source           = "github.com/myanees284/tf-module-lambda"
   iamRoleArn       = "ARN of lambda IAM role"
