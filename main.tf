@@ -7,9 +7,10 @@ resource "aws_lambda_function" "lambda" {
   runtime = "python3.8"
 }
 
-resource "aws_lambda_event_source_mapping" "event_source_mapping" {
-  batch_size        = 1
-  event_source_arn  = var.event_source_arn
-  enabled           = true
-  function_name     = aws_lambda_function.lambda.arn
-}
+# Adds the event source trigger for lambda function. Enable this block only when required.
+// resource "aws_lambda_event_source_mapping" "event_source_mapping" {
+//   batch_size        = 1
+//   event_source_arn  = var.event_source_arn
+//   enabled           = true
+//   function_name     = aws_lambda_function.lambda.arn
+// }
