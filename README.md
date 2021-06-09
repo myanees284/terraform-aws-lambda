@@ -7,7 +7,7 @@ module "awsLambda" {
   source           = "github.com/myanees284/tf-module-lambda"
   iamRoleArn       = "ARN of lambda IAM role"
   lambdaCodeFile   = each.value
-  //ARN of the source event which will trigger lambda function (Optional)
+  //(Optional) ARN of the source event which will trigger lambda function
   event_source_arn = "some event src ARN"
 }
 ~~~
