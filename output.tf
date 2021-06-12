@@ -1,3 +1,7 @@
 output "function_name" {
-  value = aws_lambda_function.lambda.arn
+  value = local.lambda_name
+}
+
+output "lambda_invoke_urn" {
+  value = local.lambda_invoke_urn
 }
