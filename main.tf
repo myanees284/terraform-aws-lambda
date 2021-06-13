@@ -1,10 +1,10 @@
 resource "aws_lambda_function" "lambda" {
-  filename      = local.lambda_zip_location
-  function_name = local.lambda_function_name
-  role          = var.iamRoleArn
-  handler       = "${local.lambda_function_name}.lambda_handler"
+  filename         = local.lambda_zip_location
+  function_name    = local.lambda_function_name
+  role             = var.iamRoleArn
+  handler          = "${local.lambda_function_name}.lambda_handler"
   source_code_hash = filebase64sha256("${local.lambda_zip_location}")
-  runtime = "python3.8"
+  runtime          = "python3.8"
 }
 
 # Adds the event source trigger for lambda function. Enable this block only when required.
