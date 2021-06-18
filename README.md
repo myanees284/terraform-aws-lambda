@@ -3,10 +3,10 @@ This terraform module creates the lambda function in python.Single or multiple p
 ## Usage
 ~~~
 module "awsLambda" {
-  for_each         = fileset("./", "*.py")
+  for_each         = fileset("./python_files/", "*.py")
   source           = "github.com/myanees284/tf-module-lambda"
   iamRoleArn       = "ARN of lambda IAM role"
-  lambdaCodeFile   = each.value
+  lambdaCodeFile   = "./python_files/${each.value}"
   //(Optional) ARN of the source event which will trigger lambda function
   event_source_arn = "some event src ARN"
 }
