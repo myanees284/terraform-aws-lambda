@@ -1,5 +1,5 @@
 # Terraform AWS lambda module
-This terraform module creates the lambda function in python.Single or multiple python files should be placed in main folder.
+This terraform module creates the lambda function in python.Single or multiple python files should be placed in separate folder(example python_files).
 ## Usage
 ~~~
 module "awsLambda" {
